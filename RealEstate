@@ -20,14 +20,15 @@
 
 <style>
 
+
+
 #background {
 	font-size: 80px;
 	font-family: Gill Sans;
 	word-spacing: 15px;
 	margin:0 auto;
-	padding: 10px 20px 10px;
 	width: 1200px;
-    height: 800px;
+    height: 600px;
     background-image: url("http://aaatrainingforsuccess.com/bloom/wp-content/uploads/2013/04/new-york-city-commercial-skyline1.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -52,17 +53,33 @@
 }
 
 h1 {
+    font-size: 80px;
+	font-family: Gill Sans;
+	word-spacing: 15px;
+	margin:0 auto;
+	padding: 10px 10px 10px;
+}
+
+
+h2 {
+   text-align: center;
+   padding: 50px;
+   font-family: Gill Sans;
+}
+
+h3 {
    text-align: center;
    padding: 35px;
    font-family: Gill Sans;
-
 }
 
 </style>
 
-<div id="background">THE REAL ESTATE MARKET</div>
+<h1>THE REAL ESTATE MARKET</h1>
 
-<h1>PRICE INDEX 2004 - 2015</h1>
+<div id="background"></div>
+
+<h2>PRICE INDEX 2004 - 2015</h2>
 
 <div class="container">
 				<canvas id="myChart" width="4" height="2"></canvas> 
@@ -242,7 +259,7 @@ h1 {
 </script>
 
 
-<h1>APARTMENT PRICES PER M2</h1>
+<h2>APARTMENT PRICES PER M2</h2>
 
 <div class="container">
 <canvas id="myChart2" width="4" height="2"></canvas>
@@ -296,7 +313,7 @@ var myChart = new Chart(ctx, {
 
 
 <div class="text">
-<h2> HOUSEHOLD INDEBTEDNESS</h2>
+<h3> HOUSEHOLD INDEBTEDNESS</h3>
 <p>The lowest level of household indebtedness can be found in Russia with 6.5 percent of residential debt to household disposable income. Countries with a low level of indebtedness are the Czech Republic, Hungary, Poland, Italy, Israel, and Austria, with residential debt
 to household disposable income of under 50 percent. Consequently, these countries have the highest potential for house price increases as a result of better overall  nancing conditions and following increases in mortgage lending. The highest level of indebtedness can be found in Sweden, Denmark, and the Netherlands with residential debt to household disposable income of above 150 percent.</p>
 </div>
