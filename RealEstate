@@ -21,11 +21,13 @@
 <style>
 
 #background {
-	font-size: 90px;
+	font-size: 80px;
+	font-family: Gill Sans;
+	word-spacing: 15px;
+	margin:0 auto;
 	padding: 10px 20px 10px;
 	width: 1200px;
-	height: 800px;
-	margin:0 auto;
+    height: 800px;
     background-image: url("http://aaatrainingforsuccess.com/bloom/wp-content/uploads/2013/04/new-york-city-commercial-skyline1.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -36,6 +38,23 @@
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 50px;
+    font-family: Gill Sans;
+
+}
+
+.text {
+     width: 1000px;
+     text-align: center;
+     padding: 35px;
+     margin:0 auto;
+     font-family: Gill Sans;
+
+}
+
+h1 {
+   text-align: center;
+   padding: 35px;
+   font-family: Gill Sans;
 
 }
 
@@ -223,9 +242,7 @@
 </script>
 
 
-<h2> HOUSEHOLD INDEBTEDNESS</h2>
-<p>The lowest level of household indebtedness can be found in Russia with 6.5 percent of residential debt to household disposable income. Countries with a low level of indebtedness are the Czech Republic, Hungary, Poland, Italy, Israel, and Austria, with residential debt
-to household disposable income of under 50 percent. Consequently, these countries have the highest potential for house price increases as a result of better overall  nancing conditions and following increases in mortgage lending. The highest level of indebtedness can be found in Sweden, Denmark, and the Netherlands with residential debt to household disposable income of above 150 percent.</p>
+<h1>APARTMENT PRICES PER M2</h1>
 
 <div class="container">
 <canvas id="myChart2" width="4" height="2"></canvas>
@@ -276,6 +293,14 @@ var myChart = new Chart(ctx, {
 });
 </script>
 </div>
+
+
+<div class="text">
+<h2> HOUSEHOLD INDEBTEDNESS</h2>
+<p>The lowest level of household indebtedness can be found in Russia with 6.5 percent of residential debt to household disposable income. Countries with a low level of indebtedness are the Czech Republic, Hungary, Poland, Italy, Israel, and Austria, with residential debt
+to household disposable income of under 50 percent. Consequently, these countries have the highest potential for house price increases as a result of better overall  nancing conditions and following increases in mortgage lending. The highest level of indebtedness can be found in Sweden, Denmark, and the Netherlands with residential debt to household disposable income of above 150 percent.</p>
+</div>
+
 
 </body>
 </html>
