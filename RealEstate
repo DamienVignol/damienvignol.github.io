@@ -227,5 +227,55 @@
 <p>The lowest level of household indebtedness can be found in Russia with 6.5 percent of residential debt to household disposable income. Countries with a low level of indebtedness are the Czech Republic, Hungary, Poland, Italy, Israel, and Austria, with residential debt
 to household disposable income of under 50 percent. Consequently, these countries have the highest potential for house price increases as a result of better overall  nancing conditions and following increases in mortgage lending. The highest level of indebtedness can be found in Sweden, Denmark, and the Netherlands with residential debt to household disposable income of above 150 percent.</p>
 
+<div>
+<canvas id="myChart2" width="4" height="2"></canvas>
+
+<script>
+var ctx = document.getElementById("myChart2");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["London", "Zurich", "Paris", "Stockholm", "Amsterdam", "Copenhagen", "Berlin", "Barcelona", "Athens"],
+        datasets: [{
+            label: 'euro per m2',
+            data: [18900, 12700, 9300, 9200, 5400, 5000, 4100, 3900, 1400],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 2, 100, 0.2)',
+                'rgba(255, 250, 12, 0.2)',
+                'rgba(69, 0, 255, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 2, 100, 1)',
+                'rgba(255, 250, 12, 1)',
+                'rgba(69, 0, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+</div>
+
 </body>
 </html>
