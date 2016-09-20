@@ -94,6 +94,13 @@ counterSnoop = counterSnoop + 0.3;
 document.getElementById("counterSnoop").innerHTML = counterSnoop;
 }, 1000);
 
+var counterClinton = -1;
+window.setInterval(
+function () {
+counterClinton = counterClinton + 1;
+document.getElementById("counterClinton").innerHTML = counterClinton;
+}, 1000);
+
 </script>
 
 </head>
@@ -125,7 +132,7 @@ document.getElementById("counterSnoop").innerHTML = counterSnoop;
 <div class="salary">
 <h3>Hillary Clinton</h3>
 <img src="http://www.motherjones.com/files/hillary-clinton_3.jpg" style="width:150px;">
-<p class="counters" id="counterGates">$</p>
+<p class="counters" id="counterClinton">$</p>
 </div>
 
 <div class="salary">
