@@ -165,6 +165,40 @@ var counterRonaldorounded = Math.round(counterRonaldo*10)/10;
 document.getElementById("counterRonaldo").innerHTML = counterRonaldorounded;
 }, 1000);
 
+
+var counterBolt = 0;
+window.setInterval(
+function () {
+counterBolt = counterBolt + 1.03;
+var counterBoltrounded = Math.round(counterBolt*10)/10;
+document.getElementById("counterBolt").innerHTML = counterBoltrounded;
+}, 1000);
+
+var counterSpielberg = 0;
+window.setInterval(
+function () {
+counterSpielberg = counterSpielberg + 3.17;
+var counterSpielbergrounded = Math.round(counterSpielberg*10)/10;
+document.getElementById("counterSpielberg").innerHTML = counterSpielbergrounded;
+}, 1000);
+
+var counterBieber = 0;
+window.setInterval(
+function () {
+counterBieber = counterBieber + 1.78;
+var counterBieberrounded = Math.round(counterBieber*10)/10;
+document.getElementById("counterBieber").innerHTML = counterBieberrounded;
+}, 1000);
+
+var counterSwift = 0;
+window.setInterval(
+function () {
+counterSwift = counterSwift + 5.39;
+var counterSwiftrounded = Math.round(counterSwift*10)/10;
+document.getElementById("counterSwift").innerHTML = counterSwiftrounded;
+}, 1000);
+
+
 </script>
 
 </head>
@@ -253,6 +287,31 @@ document.getElementById("counterRonaldo").innerHTML = counterRonaldorounded;
 <p class="counters" id="counterRonaldo"></p>
 </div>
 
+<div class="salary">
+<h3>Usain Bolt</h3>
+<img src="http://thenewexaminer.com/wp-content/uploads/2016/08/usain-bolt3.jpg" style="width:150px;">
+<p class="counters" id="counterBolt"></p>
+</div>
+
+<div class="salary">
+<h3>Steven Spielberg</h3>
+<img src="http://cdn5.thr.com/sites/default/files/2013/02/spielberg.jpg" style="width:150px;">
+<p class="counters" id="counterSpielberg"></p>
+</div>
+
+<div class="salary">
+<h3>Justin Bieber</h3>
+<img src="http://montreal.rougefm.ca/Pics/44368db38d.jpg" style="width:150px;">
+<p class="counters" id="counterBieber"></p>
+</div>
+
+<div class="salary">
+<h3>Taylor Swift</h3>
+<img src="http://www.hercampus.com/sites/default/files/2015/01/24/taylor%20swift.jpg" style="width:150px;">
+<p class="counters" id="counterSwift"></p>
+</div>
+
+<!--
 <div class="salary">
 <h3>China</h3>
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People's_Republic_of_China.svg" style="width:100px;">
@@ -347,6 +406,7 @@ document.getElementById("counterRonaldo").innerHTML = counterRonaldorounded;
 <h3>Nepal</h3>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/726px-Flag_of_Nepal.svg.png" style="height: 70px;">
 <p></p>
+-->
 </div>
 
 </div>
