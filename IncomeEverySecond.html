@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <title>Income Every Second</title>
 
@@ -90,9 +91,10 @@ document.getElementById("counterGates").innerHTML = counterGates;
 var counterSnoop = 0;
 window.setInterval(
 function () {
-counterSnoop = counterSnoop + 3;
-document.getElementById("counterSnoop").innerHTML = counterSnoop;
-}, 10000);
+counterSnoop = counterSnoop + 0.3;
+var counterSnooprounded = Math.round(counterSnoop*10)/10;
+document.getElementById("counterSnoop").innerHTML = counterSnooprounded;
+}, 1000);
 
 var counterClinton = 0;
 window.setInterval(
@@ -111,9 +113,10 @@ document.getElementById("counterWinfrey").innerHTML = counterWinfrey;
 var counterCook = 0;
 window.setInterval(
 function () {
-counterCook = counterCook + 1;
-document.getElementById("counterCook").innerHTML = counterCook;
-}, 3333);
+counterCook = counterCook + 0.29;
+var counterCookrounded = Math.round(counterCook*10)/10;
+document.getElementById("counterCook").innerHTML = counterCookrounded;
+}, 1000);
 
 var counterDowney = 0;
 window.setInterval(
@@ -143,14 +146,29 @@ counterLawrence = counterLawrence + 1.5;
 document.getElementById("counterLawrence").innerHTML = counterLawrence;
 }, 1000);
 
-var counterObama = 0;
+var counterTrump = 0;
 window.setInterval(
 function () {
-counterObama = counterObama + 1.3;
-document.getElementById("counterObama").innerHTML = ccounterObama;
-}, 100000);
+counterTrump = counterTrump + 12.3;
+var counterTrumprounded = Math.round(counterTrump*10)/10;
+document.getElementById("counterTrump").innerHTML = counterTrumprounded;
+}, 1000);
 
+var counterMcCartney = 0;
+window.setInterval(
+function () {
+counterMcCartney = counterMcCartney + 1.83;
+var counterMcCartneyrounded = Math.round(counterMcCartney*10)/10;
+document.getElementById("counterMcCartney").innerHTML = counterMcCartneyrounded;
+}, 1000);
 
+var counterRonaldo = 0;
+window.setInterval(
+function () {
+counterRonaldo = counterRonaldo + 2.85;
+var counterRonaldorounded = Math.round(counterRonaldo*10)/10;
+document.getElementById("counterRonaldo").innerHTML = counterRonaldorounded;
+}, 1000);
 
 </script>
 
@@ -223,21 +241,21 @@ document.getElementById("counterObama").innerHTML = ccounterObama;
 </div>
 
 <div class="salary">
-<h3>Barack Obama</h3>
-<img src="http://cp91279.biography.com/1000509261001/1000509261001_2008586720001_BIO-Barack-Obama-SF-FIX-Retry.jpg" style="width:150px;">
-<p class="counters" id="counterObama"></p>
+<h3>Donal Trump</h3>
+<img src="http://media.salon.com/2015/09/donald_trump_flag.jpg" style="width:150px;">
+<p class="counters" id="counterTrump"></p>
 </div>
 
 <div class="salary">
 <h3>Paul McCartney</h3>
 <img src="http://www.nme.com/images/2015PaulMcCartney_Press_060315.hero.jpg" style="width:150px;">
-<p></p>
+<p class="counters" id="counterMcCartney"></p>
 </div>
 
 <div class="salary">
 <h3>Cristiano Ronaldo</h3>
 <img src="http://www.tagheuer.com/uploads/ambassadorrelift/0f28e1bdc579dff7575c130fe2e1c0077ebe8eff.jpg" style="width:150px;">
-<p></p>
+<p class="counters" id="counterRonaldo"></p>
 </div>
 
 <div class="salary">
