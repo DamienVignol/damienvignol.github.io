@@ -69,9 +69,32 @@ h3 {
      background-color: white;   
 }
 
+.counters {
+	font-size: 1.5em;
+    font-weight: lighter;
+    font-family: 'gill sans';
+}
 
 
 </style>
+
+<script type="text/javascript">
+
+var counterGates = -1;
+window.setInterval(
+function () {
+counterGates = counterGates + 37;
+document.getElementById("counterGates").innerHTML = counterGates;
+}, 100);
+
+var counterSnoop = 0;
+window.setInterval(
+function () {
+counterSnoop = counterSnoop + 0.3;
+document.getElementById("counterSnoop").innerHTML = counterSnoop;
+}, 1000);
+
+</script>
 
 </head>
 
@@ -81,7 +104,7 @@ h3 {
 <header>
 <div>
 	<H1>Income every second</h1>
-	<p>in USD and per person</p>
+	<p>in USD and per person since you opened this page</p>
 </div>
 </header>
 
@@ -90,25 +113,25 @@ h3 {
 <div class="salary">
 <h3>Bill Gates</h3>
 <img src="http://aib.edu.au/blog/wp-content/uploads/2015/08/bill-gates-jpg.jpg" style="width:150px;">
-<p></p>
+<p class="counters" id="counterGates">$</p>
 </div>
 
 <div class="salary">
 <h3>Snoop Dogg</h3>
 <img src="http://img0.gtsstatic.com/wallpapers/aae482bd20caf2fd0c7d71fcf996137a_large.jpeg" style="width:150px;">
-<p></p>
+<p class="counters" id="counterSnoop">$</p>
 </div>
 
 <div class="salary">
 <h3>Hillary Clinton</h3>
 <img src="http://www.motherjones.com/files/hillary-clinton_3.jpg" style="width:150px;">
-<p></p>
+<p class="counters" id="counterGates">$</p>
 </div>
 
 <div class="salary">
 <h3>Oprah Winfrey</h3>
 <img src="https://c.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2015/10/3051589-poster-p-1-the-key-to-oprah-winfreys-success-radical-focus.jpg" style="width:150px;">
-<p></p>
+<p class="counters" id="counterGates">$</p>
 </div>
 
 <div class="salary">
