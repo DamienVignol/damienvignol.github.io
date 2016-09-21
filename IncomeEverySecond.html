@@ -2,17 +2,7 @@
 <title>Income Every Second</title>
 
 <head>
-	
-	 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-41236450-2', 'auto');
-  ga('send', 'pageview');
-</script>
-	
-	
+
 <style type="text/css">
 
 body {
@@ -58,7 +48,7 @@ h3 {
 }
 
 #container {
-	width: 1100px;
+	width: 1070px;
 	margin: 0 auto;
 	font-size: 0.9em;
 	padding-top: 120px;
@@ -85,7 +75,15 @@ h3 {
 
 </style>
 
+
 <script type="text/javascript">
+
+var counterGeneral = 0;
+window.setInterval(
+function () {
+counterGeneral = counterGeneral + 1;
+document.getElementById("counterGeneral").innerHTML = counterGeneral;
+}, 1000);
 
 var counterGates = 0;
 window.setInterval(
@@ -219,8 +217,8 @@ document.getElementById("counterSwift").innerHTML = counterSwiftrounded;
 
 <header>
 <div>
-	<H1>Income every second</h1>
-	<p>in USD and per person since you opened this page</p>
+	<H1>Net income in <span id="counterGeneral"></span> seconds</h1>
+	<p style="font-size: 1.8em; margin-top: -15px; ">in USD</p>
 </div>
 </header>
 
@@ -234,19 +232,19 @@ document.getElementById("counterSwift").innerHTML = counterSwiftrounded;
 
 <div class="salary">
 <h3>Snoop Dogg</h3>
-<img src="http://img0.gtsstatic.com/wallpapers/aae482bd20caf2fd0c7d71fcf996137a_large.jpeg" style="width:150px;">
+<img src="http://img0.gtsstatic.com/wallpapers/aae482bd20caf2fd0c7d71fcf996137a_large.jpeg" style="width:160px;">
 <p class="counters" id="counterSnoop"></p>
 </div>
 
 <div class="salary">
 <h3>Hillary Clinton</h3>
-<img src="http://www.motherjones.com/files/hillary-clinton_3.jpg" style="width:150px;">
+<img src="http://www.motherjones.com/files/hillary-clinton_3.jpg" style="width:175px">
 <p class="counters" id="counterClinton"></p>
 </div>
 
 <div class="salary">
 <h3>Oprah Winfrey</h3>
-<img src="https://c.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2015/10/3051589-poster-p-1-the-key-to-oprah-winfreys-success-radical-focus.jpg" style="width:150px;">
+<img src="https://c.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2015/10/3051589-poster-p-1-the-key-to-oprah-winfreys-success-radical-focus.jpg" style="width:170px;">
 <p class="counters" id="counterWinfrey"></p>
 </div>
 
@@ -258,7 +256,7 @@ document.getElementById("counterSwift").innerHTML = counterSwiftrounded;
 
 <div class="salary">
 <h3>Robert Downey Jr.</h3>
-<img src="http://www.celebritybeliefs.com/wp-content/uploads/2016/06/robert-downey-jr-beliefs-religion-hobbies.jpg" style="width:150px;">
+<img src="http://www.celebritybeliefs.com/wp-content/uploads/2016/06/robert-downey-jr-beliefs-religion-hobbies.jpg" style="width:160px;">
 <p class="counters" id="counterDowney"></p>
 </div>
 
@@ -270,13 +268,13 @@ document.getElementById("counterSwift").innerHTML = counterSwiftrounded;
 
 <div class="salary">
 <h3>Beyonce Knowles</h3>
-<img src="http://www.etonline.com/media/video/2016/06/24244938/et_BeyonceSneeze_1280.jpg" style="width:150px;">
+<img src="http://www.etonline.com/media/video/2016/06/24244938/et_BeyonceSneeze_1280.jpg" style="width:170px;">
 <p class="counters" id="counterBeyonce"></p>
 </div>
 
 <div class="salary">
 <h3>Jennifer Lawrence</h3>
-<img src="http://a4.files.fashionista.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTMwMTI4MTQyMjgyMDU5NzQ2.jpg" style="width:150px;">
+<img src="http://a4.files.fashionista.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTMwMTI4MTQyMjgyMDU5NzQ2.jpg" style="width:170px;">
 <p class="counters" id="counterLawrence"></p>
 </div>
 
@@ -288,31 +286,31 @@ document.getElementById("counterSwift").innerHTML = counterSwiftrounded;
 
 <div class="salary">
 <h3>Paul McCartney</h3>
-<img src="http://www.nme.com/images/2015PaulMcCartney_Press_060315.hero.jpg" style="width:150px;">
+<img src="http://www.nme.com/images/2015PaulMcCartney_Press_060315.hero.jpg" style="width:170px;">
 <p class="counters" id="counterMcCartney"></p>
 </div>
 
 <div class="salary">
 <h3>Cristiano Ronaldo</h3>
-<img src="http://www.tagheuer.com/uploads/ambassadorrelift/0f28e1bdc579dff7575c130fe2e1c0077ebe8eff.jpg" style="width:150px;">
+<img src="http://www.tagheuer.com/uploads/ambassadorrelift/0f28e1bdc579dff7575c130fe2e1c0077ebe8eff.jpg" style="width:170px;">
 <p class="counters" id="counterRonaldo"></p>
 </div>
 
 <div class="salary">
 <h3>Usain Bolt</h3>
-<img src="http://thenewexaminer.com/wp-content/uploads/2016/08/usain-bolt3.jpg" style="width:150px;">
+<img src="http://thenewexaminer.com/wp-content/uploads/2016/08/usain-bolt3.jpg" style="width:160px;">
 <p class="counters" id="counterBolt"></p>
 </div>
 
 <div class="salary">
 <h3>Steven Spielberg</h3>
-<img src="http://cdn5.thr.com/sites/default/files/2013/02/spielberg.jpg" style="width:150px;">
+<img src="http://cdn5.thr.com/sites/default/files/2013/02/spielberg.jpg" style="width:170px;">
 <p class="counters" id="counterSpielberg"></p>
 </div>
 
 <div class="salary">
 <h3>Justin Bieber</h3>
-<img src="http://montreal.rougefm.ca/Pics/44368db38d.jpg" style="width:150px;">
+<img src="http://montreal.rougefm.ca/Pics/44368db38d.jpg" style="width:170px;">
 <p class="counters" id="counterBieber"></p>
 </div>
 
