@@ -32,36 +32,3 @@ Instagram.init({
 	access_token:'21447540.214b851.23a1d57c7103426d90738caa683e28e1'
 });
 
-$(document).ready(function(){
-
-	Instagram.popular(function( response ) {
-		var $instagram = $('#instagram');
-		for ( var i = 0; i < response.data.length; i++ ) {
-			imageUrl = response.data[i].images.low_resolution.url;
-			$instagram.append('<img src="' + imageUrl + '" />' );
-		}
-	});
-
-$('#form').on('submit', function( e ) {
-	e.preventDefault();
-	var tagName = $( '#search' ).val();
-	Instagram.tagsByName( tagName, function( response ){
-			var $instagram = $('#instagram');
-			$instagram.html('');
-
-			for ( var i = 0; i < response.data.length; i++ ) {
-			imageUrl = response.data[i].images.low_resolution.url;
-			$instagram.append('<img src="' + imageUrl + '" />' );
-
-	});
-});
-
-});
-
-
-// https://instagram.com/oauth/authorize/?client_id=214b851c9b9449eb8f3162ac981ce678&amp;redirect_uri=http://www.damienvignol.com/photography/&amp;response_type=token
-
-
-// access_token=21447540.214b851.23a1d57c7103426d90738caa683e28e1
-
-
