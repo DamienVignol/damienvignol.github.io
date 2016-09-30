@@ -1,26 +1,149 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<title>Instagram  API</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-
-<form id="form">
-<input type="text" id="search" />
-<input type="submit">
-</form>
-
-<div id="instagram"></div>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Test page</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="chartist.js" type="text/javascript" rel="javascript"></script>
+  </head>
+  <body>
 
 
-<footer>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
-</footer>
-</body>
+    <!--<h2>Period: <input type="text" class="year" value="2016M05"></input></h2>-->
+    <h1 class="title">Polls throughout the years</h1>
+
+<div class="search">
+
+    <select class="period">
+      <option value="2016M05">2016 May</option>
+      <option value="2015M11">2015 November</option>
+      <option value="2015M05">2015 May</option>
+      <option value="2014M11">2014 November</option>
+      <option value="2014M05">2014 May</option>
+      <option value="2013M11">2013 November</option>
+      <option value="2013M05">2013 May</option>
+      <option value="2012M11">2012 November</option>
+    </select>
+
+    <button type="button" class="page-content"><a href="#" class="js-get" style="text-decoration: none;">Hit me!</a></button>
+
+</div>
+
+<div class="results">
+    <h2>Centerpartiet: <span class="centerpartiet"></span></h2>
+    <h2>Liberalerna: <span class="liberalerna"></span></h2>
+    <h2>Moderaterna: <span class="moderaterna"></span></h2>
+    <h2>Kristdemokraterna: <span class="kristdemokraterna"></span></h2>
+    <h2>Socialdemokraterna: <span class="socialdemokraterna"></span></h2>
+    <h2>Vänsterpartiet: <span class="vansterpartiet"></span></h2>
+    <h2>Miljöpartiet: <span class="miljopartiet"></span></h2>
+    <h2>Sverigedemokraterna: <span class="sverigedemokraterna"></span></h2>
+    <h2>Övrigt: <span class="ovrigt"></span></h2>
+
+</div>
+
+    <div class="ct-chart"></div>
+
+
+    <script>
+      $(function(){
+
+        $(".js-get").click(function(){
+          var getYear = $(".period").val();
+
+          var postURL = "http://api.scb.se/OV0104/v1/doris/sv/ssd/START/ME/ME0201/ME0201A/Vid10";
+          var jsonData = {
+              "query": [
+                {
+                  "code": "ContentsCode",
+                  "selection": {
+                    "filter": "item",
+                    "values": [
+                      "ME0201B1"
+                    ]
+                  }
+                },
+                {
+                  "code": "Tid",
+                  "selection": {
+                    "filter": "item",
+                    "values": [
+                      getYear
+                    ]
+                  }
+                }
+              ],
+              "response": {
+                "format": "json"
+              }
+            }
+
+          $.post( postURL, JSON.stringify(jsonData), function(data) {
+            console.log(data);
+            var year = data.data[0].key[1];
+            var Cent = data.data[0].values[0] + '%';
+            var Lib = data.data[1].values[0] + '%';
+            var Mod = data.data[2].values[0] + '%';
+            var Kri = data.data[3].values[0] + '%';
+            var Soc = data.data[5].values[0] + '%';
+            var Van = data.data[6].values[0] + '%';
+            var Mil = data.data[7].values[0] + '%';
+            var Sd = data.data[8].values[0] + '%';
+            var Ovr = data.data[9].values[0] + '%';
+
+            $(".year").html(year);
+            $(".centerpartiet").html(Cent);
+            $(".liberalerna").html(Lib);
+            $(".moderaterna").html(Mod);
+            $(".kristdemokraterna").html(Kri);
+            $(".socialdemokraterna").html(Soc);
+            $(".vansterpartiet").html(Van);
+            $(".miljopartiet").html(Mil);
+            $(".sverigedemokraterna").html(Sd);
+            $(".ovrigt").html(Ovr);
+
+            var chartData = {
+              labels: ['C', 'L', 'M', 'KD', 'S', 'V', 'MP', 'SD', 'Övrigt'],
+              series: [parseInt(Cent), parseInt(Lib), parseInt(Mod), parseInt(Kri), parseInt(Soc), parseInt(Van), parseInt(Mil), parseInt(Sd), parseInt(Ovr)]
+            };
+
+            var sum = function(a, b) { return a + b };
+
+            var options = {
+              labelInterpolationFnc: function(value) {
+              return Math.round(value / data.series.reduce(sum) * 100) + '%';
+              }
+          };
+
+          var responsiveOptions = [
+            ['screen and (min-width: 640px)', {
+              chartPadding: 30,
+              labelOffset: 100,
+              labelDirection: 'explode',
+              labelInterpolationFnc: function(value) {
+                return value;
+              }
+            }],
+            ['screen and (min-width: 1024px)', {
+              labelOffset: 150,
+              chartPadding: 80
+            }]
+          ];
+
+          new Chartist.Pie('.ct-chart', chartData, options, responsiveOptions);
+
+
+
+        });
+
+      });
+
+    });
+    </script>
+
+  </body>
+
 </html>

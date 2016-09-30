@@ -1,0 +1,40 @@
+    body {
+      font-family: centurygothic;
+      font-style: normal;
+      background-color: #FFF0D0;
+    }
+
+    .ct-chart {
+      width: 650px;
+      height: 650px;
+      float: right;
+      margin-top: -30px;
+    }
+
+    .ct-label {
+    fill: rgba(0,0,0, 1);
+    color: rgba(0,0,0, 1);
+    font-size: 1rem;
+    line-height: 1;
+    }
+
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .search {
+      text-align: center;
+    }
+
+    .results {
+      text-align: left;
+      float: left;
+      line-height: 2.5em;
+      margin-left: 60px;
+    }
+
+    h2 {
+      font-weight: lighter;
+    }
